@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%- name %></title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <style>
+      #jumbo {
+        font-family: 'Lobster', cursive;  
+      }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+<body style="background-color:  #e4f4ff">
+    <div id="body">
+      <!-- Navbar -->
+      <nav class="navbar navbar-light bg" style="height: 80px;background-color: #e1f2ff;">
+        <a class="navbar-brand" style="margin-left: 5%; font-size: 30px; color: rgb(46, 42, 36); font-family: 'Lobster', cursive;"href=<%- auth %>>Travel Buddy</a>
+        <form class="form-inline" style="margin-right: 3%;">
+            <% if(x==0) {%>
+            <button class="btn" type="submit" style="color: rgb(46, 42, 36);"><a href="/signIn">Log In</a></button>
+            <button class="btn" type="submit" style="color: rgb(46, 42, 36);"><a href="/signUp">Sign Up</a></button>
+            <% }%>
+          
+          <% if(x==1||x==2) { %>
+            <button class="btn" type="submit" style="color: rgb(46, 42, 36);"><a href="/signOut">Sign Out</a></button>
+          <% } %>
+        </form>
+      </nav>
+    </div>
+
+    <div class="card" style="margin-left: 25%; margin-right: 25%; margin-top: 5%; background-color: rgb(195, 253, 193);">
+        <h1 style="font-family: 'Patrick Hand', cursive; align-self: center;"><%- name %></h1>
+        <h2 style="font-family: 'Patrick Hand', cursive;  align-self: center;"> <%- country %></h2>
+        <h3 style="font-family: 'Patrick Hand', cursive;"> <%- information %></h3>  
+        <br> 
+        <img src="<%- typeof file != 'undefined' ? file: ''%>" class="responsive-img" height="300px" width="60%" id="img" style="margin-left: 20%;"></img><br>
+        <button class="btn" type="submit" style="color: rgb(46, 42, 36);"><a href="/download">Click Here to download Itenary</a></button>  
+    </div>
+    <br>
+    <br>
+    <div style="align-self: center;">
+      <button class="btn" type="submit" style="margin-left: 45%;"><a href=<%- auth %>> Back To Home Page</a></button>
+    </div>
+    
+</body>
+<script>
+  let x = document.getElementById('img');
+  console.log(x);
+</script>
+</html>

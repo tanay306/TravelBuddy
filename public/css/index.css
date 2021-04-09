@@ -1,0 +1,28 @@
+#jumbo {
+  margin-top: 50%;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+#body {
+  background-image: linear-gradient(
+    to right,
+    #434343 0%,
+    black 100%
+  ) !important;
+}
+#row {
+  margin: 10%;
+  width: 80%;
+}
+#jumbo2 {
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+#row1 {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.tab {
+  margin-left: 10%;
+  margin-right: 10%;
+}

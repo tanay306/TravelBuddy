@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Travel Buddy</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+      #jumbo {
+        font-family: 'Lobster', cursive;  
+      }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  </head>
+  <body style="background-color:  #e4f4ff">
+    <div id="body">
+      <!-- Navbar -->
+      <nav class="navbar navbar-light bg" style="height: 80px;background-color: #e1f2ff;">
+        <a class="navbar-brand" style="margin-left: 5%; font-size: 30px; color: rgb(46, 42, 36); font-family: 'Lobster', cursive;"href="/Admin">Travel Buddy</a>
+        <form class="form-inline" style="margin-right: 3%;">
+          <button class="btn" type="submit" style="color: rgb(46, 42, 36);"><a href="/createCity">Create City</a></button>
+          <button class="btn" type="submit" style="color: rgb(46, 42, 36);"><a href="/signOut">Sign Out</a></button>
+        </form>
+      </nav>
+    </div>
+      <!-- Jumbotron -->
+      <div class="jumbotron jumbotron-fluid" id="jumbo" style="background-color :#e4f4ff ;">
+        <h1 style=" text-align: center;">Welcome to Travel Buddy!</h1>
+      </div>
+
+
+      <div class="card" style="margin-left: 25%; margin-right: 25%; margin-top: 4%; background-color: rgb(195, 253, 193);">
+        <div class="row" id="row" style="margin-left: 10%; margin-right: 10%; margin-top: 5%; margin-bottom: 50px;">
+          <div class="col-sm-12">
+            <h3 style="font-family: 'Lobster', cursive; text-align: center;">Our Group Tours</h3><br>
+            <marquee style="font-size: 18px; font-weight:400; color: rgb(15, 15, 202);"><%- mark %></marquee><br><br>
+            <form action="/" method="POST">
+              <div class="form-group">
+                <label for="city"  style="color: rgb(22, 21, 21); font-size: large;">Search for a specific city</label>
+                <input type="text" class="form-control" name="city" required autocomplete="off">
+              </div>
+              <button type="submit" class="btn btn-dark">Search</button>    
+            </div>   
+          </form>
+        </div>
+      </div>
+
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create City</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body style="background-color:  #e4f4ff">
+    <div id="body">
+      <!-- Navbar -->
+      <nav class="navbar navbar-light bg" style="height: 80px;background-color: #e1f2ff;">
+        <a class="navbar-brand" style="margin-left: 5%; font-size: 30px; color: rgb(46, 42, 36); font-family: 'Lobster', cursive;"href="/Admin">Travel Buddy</a>
+        <form class="form-inline" style="margin-right: 3%;">
+          <button class="btn" type="submit" style="color: rgb(46, 42, 36);"><a href="/createCity">Create City</a></button>
+          <button class="btn" type="submit" style="color: rgb(46, 42, 36);"><a href="/signOut">Sign Out</a></button>
+        </form>
+      </nav>
+    </div>
+
+    <div class="card" style="margin-left: 25%; margin-right: 25%; margin-top: 5%; background-color: rgb(195, 253, 193);">
+        <div class="row" id="row" style="margin-left: 100px; margin-right: 100px; margin-top: 50px; margin-bottom: 50px;">
+          <div class="col-sm-12">
+                <!-- Makes POST request to /login route -->
+                <form action="/createCity" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="name" style="color: rgb(22, 21, 21);">Enter City Name</label>
+                        <input class="form-control" name="name" required id="one">
+                    </div>
+                    <div class="form-group">
+                        <label for="information" style="color: rgb(22, 21, 21);">Enter information</label>
+                        <input class="form-control" name="information" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country" style="color: rgb(22, 21, 21);">Enter Country Name</label>
+                        <input class="form-control" name="country" required>
+                    </div> 
+                    <div class="form-group">
+                      <label for="days" style="color: rgb(22, 21, 21);">Enter Number of Days Of Tour</label>
+                      <input class="form-control" name="days" required>
+                  </div> 
+                    <div class="file-field input-field">
+                      <div class="btn grey">
+                          <span>Image</span>
+                          <input type="file" name="img"/>
+                      </div>
+                  </div>  
+                    <div class="file-field input-field">
+                        <div class="btn grey">
+                            <span>Itenary</span>
+                            <input type="file" name="doc"/>
+                        </div>
+                    </div>   
+                  <button type="submit" class="btn btn-dark" style="margin-top: 2%; margin-left: 42%;">Submit</button>
+                </form>
+              </div>   
+        </div>
+      </div>
+    
+</body>
+<script>
+  let x = document.getElementById('one').innerHTML;
+  console.log(x);
+</script>
+</html>

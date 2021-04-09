@@ -1,0 +1,33 @@
+{
+  "name": "travelbuddy",
+  "version": "1.0.0",
+  "description": "This is a basic travel website using HTML & CSS in Frontend and NodeJS, ExpressJS and MongoDb as Backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanay306/TravelBuddy.git"
+  },
+  "author": "Tanay Gandhi",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "uuidv4": "^6.2.7"
+  },
+  "bugs": {
+    "url": "https://github.com/tanay306/TravelBuddy/issues"
+  },
+  "homepage": "https://github.com/tanay306/TravelBuddy#readme"
+}
